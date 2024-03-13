@@ -38,13 +38,13 @@ namespace HouseRentingSystem.Core.Services
 
         public async Task<bool> UserHasRentsAsync(string userId)
         {
-            await repository.AllReadOnly<House>()
+           return await repository.AllReadOnly<House>()
                 .AnyAsync(h => h.RenterId == userId);
         }
 
         public async Task<bool> UserWithPhoneNumberExistsAsync(string phoneNumber)
         {
-            await repository.AllReadOnly<Agent>()
+          return await repository.AllReadOnly<Agent>()
                 .AnyAsync(a => a.PhoneNumber == phoneNumber);
         }
     }
