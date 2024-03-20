@@ -35,6 +35,7 @@ namespace HouseRentingSystem.Core.Models.House
 
         [Display(Name = "Is Rented")]
         public bool IsRented { get; set; }
+        
 
     }
 }
